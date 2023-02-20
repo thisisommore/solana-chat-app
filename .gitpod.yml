@@ -1,5 +1,5 @@
 image:
   file: .gitpod/Dockerfile
 tasks:
-    - init: cd maxapp && cargo build
+    - init: cd chat-app && cargo build
       command: echo $SOLANA_KEY | base64 -d  > /home/gitpod/.config/solana/id.json && solana airdrop 2
