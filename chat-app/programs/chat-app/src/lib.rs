@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("8pW94nJtpxwHmNp1A9hAmTihwQgvGMrp8J5v9ACRsEdC");
+declare_id!("Fyr6LWcjU2iGGTna5ABWNHeT5ZRqcuFnSE69WXyzAVL1");
 
 #[program]
 pub mod chat_app {
