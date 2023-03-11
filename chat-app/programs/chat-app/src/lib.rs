@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("Fyr6LWcjU2iGGTna5ABWNHeT5ZRqcuFnSE69WXyzAVL1");
+declare_id!("4rr7RkKDYipoCNZCyrLYjP9zeEgLgFJW42GUmryZFnry");
 
 #[program]
 pub mod chat_app {
@@ -17,7 +17,8 @@ pub mod chat_app {
         message_account.content_hash = content_hash;
         message_account.sender = ctx.accounts.sender.key();
         message_account.receiver = ctx.accounts.receiver.key().to_owned();
-
+        let clock = Clock::get()?;
+        message_account.time = clock.unix_timestamp;
         Ok(())
     }
 }
@@ -27,6 +28,7 @@ pub struct Message {
     pub sender: Pubkey,
     pub receiver: Pubkey,
     pub content_hash: String,
+    pub time: i64,
 }
 
 // TODO recalculate all spaces

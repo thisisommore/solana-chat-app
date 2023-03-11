@@ -2,13 +2,13 @@
 seeds = false
 skip-lint = false
 [programs.localnet]
-chat_app = "Fyr6LWcjU2iGGTna5ABWNHeT5ZRqcuFnSE69WXyzAVL1"
+chat_app = "4rr7RkKDYipoCNZCyrLYjP9zeEgLgFJW42GUmryZFnry"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Devnet"
+cluster = "Localnet"
 wallet = "/home/gitpod/.config/solana/id.json"
 
 [scripts]
